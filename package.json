@@ -12,9 +12,10 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@lucide/astro": "^1.17.0",
     "@tailwindcss/vite": "^4.3.0",
     "astro": "^6.4.6",
-    "lucide-astro": "^0.556.0",
+    "lucide-react": "^1.17.0",
     "tailwindcss": "^4.3.0"
   },
   "devDependencies": {
