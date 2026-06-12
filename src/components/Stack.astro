@@ -1,0 +1,24 @@
+---
+import StackCard from './StackCard.astro'
+import StackCardItem from './StackCardItem.astro'
+---
+
+<section class="bg-surface px-5 py-10 md:px-14 md:py-20">
+  <p class="text-muted mb-4 font-mono text-sm tracking-widest uppercase">
+    <span class="text-accent">(01)</span> — Stack
+  </p>
+  <h2 class="mb-16 max-w-[24ch]">
+    A focused toolkit — the things I reach for daily.
+  </h2>
+  <div class="flex w-full items-stretch justify-between">
+    <StackCard title="Core">
+      <StackCardItem item="HTML" num="01" />
+      <StackCardItem item="CSS" num="02" />
+      <StackCardItem item="JavaScript" num="03" />
+      <StackCardItem item="TypeScript" num="04" />
+    </StackCard>
+    <StackCard title="Framework" />
+    <StackCard title="Platform" />
+    <StackCard title="Practice" />
+  </div>
+</section>
