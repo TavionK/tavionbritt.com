@@ -19,8 +19,9 @@
     html {
         background-color: var(--color-bg);
         color: var(--color-text);
-        font-family: var(--font-sans);
+        font-family: var(--font-sans), sans-serif;
         -webkit-font-smoothing: antialiased;
+        scrollbar-gutter: stable;
     }
 
     body {
@@ -29,7 +30,7 @@
     }
 
     h1, h2, h3 {
-        font-family: var(--font-serif);
+        font-family: var(--font-serif), serif;
         font-weight: 500;
         letter-spacing: -0.025em;
         color: var(--color-text);
@@ -53,7 +54,7 @@
     }
 
     p {
-        font-family: var(--font-sans);
+        font-family: var(--font-sans), sans-serif;
         margin: 0;
     }
 
