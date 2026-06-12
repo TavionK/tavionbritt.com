@@ -10,15 +10,25 @@ import StackCardItem from './StackCardItem.astro'
   <h2 class="mb-16 max-w-[24ch]">
     A focused toolkit — the things I reach for daily.
   </h2>
-  <div class="flex w-full items-stretch justify-between">
+  <div class="grid w-full grid-cols-2 gap-10 md:grid-cols-4">
     <StackCard title="Core">
       <StackCardItem item="HTML" num="01" />
       <StackCardItem item="CSS" num="02" />
       <StackCardItem item="JavaScript" num="03" />
       <StackCardItem item="TypeScript" num="04" />
     </StackCard>
-    <StackCard title="Framework" />
-    <StackCard title="Platform" />
-    <StackCard title="Practice" />
+    <StackCard title="Framework">
+      <StackCardItem item="React" num="05" />
+      <StackCardItem item="Next.js" num="06" />
+      <StackCardItem item="Astro" num="07" />
+    </StackCard>
+    <StackCard title="Platform">
+      <StackCardItem item="Supabase" num="08" />
+      <StackCardItem item="Git" num="09" />
+    </StackCard>
+    <StackCard title="Practice">
+      <StackCardItem item="Accessibility" num="A11y" />
+      <StackCardItem item="Performance" num="Perf" />
+    </StackCard>
   </div>
 </section>

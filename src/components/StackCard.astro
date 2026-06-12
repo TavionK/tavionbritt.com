@@ -2,8 +2,12 @@
 const { title, startNum } = Astro.props
 ---
 
-<article class="border-accent border-t-2 pt-2">
-  <h3 class="text-muted text-sm uppercase">{title}</h3>
+<article class="border-accent flex-1 border-t-2 pt-2">
+  <h3
+    class="text-muted mb-2 font-mono text-sm font-medium tracking-widest uppercase"
+  >
+    {title}
+  </h3>
   <ul>
     <slot />
   </ul>
