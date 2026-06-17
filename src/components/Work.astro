@@ -1,10 +1,18 @@
 ---
-
+import Project from './Project.astro'
 ---
 
 <section id="work" class="px-5 py-10 md:px-14 md:py-20">
   <p class="text-muted mb-4 font-mono text-sm tracking-widest uppercase">
     <span class="text-accent">(02)</span> — Selected Work
   </p>
-  <h2 class="mb-16 max-w-[24ch]">Three things I've shipped.</h2>
+  <h2 class="max-w-[24ch]">Three things I've shipped.</h2>
+  <div class="border-line my-6 border-t"></div>
+  <Project
+    title="Loop"
+    category="Full-Stack App"
+    desc="Task management with real auth — sign in with email or Google, and your tasks follow you across devices via Supabase."
+    ghUrl="https://github.com/TavionK/Loop-app"
+    demoUrl="https://loop-todo-list.netlify.app/"
+  />
 </section>
