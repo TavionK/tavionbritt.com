@@ -22,14 +22,14 @@ const { num, title, category, desc, ghUrl, demoUrl, odd } = Astro.props
       <slot />
     </div>
     <div>
-      <a
-        class="border-accent mr-6 inline-flex items-center gap-2 border-b font-mono text-sm"
-        href={demoUrl}>Live <MoveUpRight size={8} stroke-width={3} /></a
-      >
-      <a
-        class="text-muted inline-flex items-center gap-2 font-mono text-sm"
-        href={ghUrl}>GitHub <MoveUpRight size={8} stroke-width={3} /></a
-      >
+      {demoUrl && ghUrl ? <a
+          class="border-accent mr-6 inline-flex items-center gap-2 border-b font-mono text-sm"
+          href={demoUrl}>Live <MoveUpRight size={8} stroke-width={3} /></a
+        >
+        <a
+          class="text-muted inline-flex items-center gap-2 font-mono text-sm"
+          href={ghUrl}>GitHub <MoveUpRight size={8} stroke-width={3} /></a
+        > : ''}
     </div>
   </div>
 </article>
