@@ -1,5 +1,5 @@
 ---
-
+import { MoveUpRight } from '@lucide/astro'
 ---
 
 <section
@@ -9,11 +9,45 @@
   <p class="text-muted mb-4 font-mono text-sm tracking-widest uppercase">
     <span class="text-accent">(03)</span> — Contact
   </p>
-  <h2 class="md:max-w-[24ch]">
+  <h2 class="mb-4 md:max-w-[24ch]">
     Have something that should feel effortless to use?
   </h2>
-  <p class="text-muted my-4 text-balance md:max-w-[50ch]">
+  <p class="text-muted mb-8 text-balance md:max-w-[50ch]">
     I'm open to frontend roles and a little select freelance. Fastest way to
     reach me is email — I read every one.
   </p>
+  <div class="flex flex-col gap-2">
+    <a
+      href="mailto:tavion.k.britt99@gmail.com"
+      class="border-line flex cursor-pointer items-center justify-between border-y py-6"
+    >
+      <span class="text-muted font-mono text-sm uppercase">email</span>
+      <span class="flex items-center gap-2 font-serif text-xl"
+        >tavion.k.britt99@gmail.com <MoveUpRight
+          color="#E89A4C"
+          size={15}
+        /></span
+      >
+    </a>
+    <a
+      target="_blank"
+      href="https://github.com/TavionK"
+      class="border-line flex cursor-pointer items-center justify-between border-b py-6"
+    >
+      <span class="text-muted font-mono text-sm uppercase">github</span>
+      <span class="flex items-center gap-2 font-serif text-xl"
+        >github.com/TavionK <MoveUpRight color="#E89A4C" size={15} /></span
+      >
+    </a>
+    <a
+      target="_blank"
+      href="https://www.linkedin.com/in/tavionb/"
+      class="border-line flex cursor-pointer items-center justify-between border-b py-6"
+    >
+      <span class="text-muted font-mono text-sm uppercase">linkedin</span>
+      <span class="flex items-center gap-2 font-serif text-xl"
+        >in/tavionb <MoveUpRight color="#E89A4C" size={15} /></span
+      >
+    </a>
+  </div>
 </section>
