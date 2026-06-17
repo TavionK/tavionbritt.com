@@ -6,12 +6,15 @@ import { MoveUpRight } from '@lucide/astro'
 
 <article>
   <p class="text-accent font-mono text-xs uppercase">{category}</p>
-  <h3 class="">{title}</h3>
-  <p>{desc}</p>
+  <h3 class="mb-2">{title}</h3>
+  <p class="text-muted max-w-[52ch]">{desc}</p>
+  <div class="my-6 flex gap-2">
+    <slot />
+  </div>
   <div>
     <a
-      class="border-accent mr-2 inline-flex flex-1 items-center gap-2 border-b font-mono text-sm"
-      href={demoUrl}>Live <MoveUpRight size={10} stroke-width={3} /></a
+      class="border-accent mr-6 inline-flex flex-1 items-center gap-2 border-b font-mono text-sm"
+      href={demoUrl}>Live <MoveUpRight size={8} stroke-width={3} /></a
     >
     <a
       class="text-muted inline-flex items-center gap-2 font-mono text-sm"

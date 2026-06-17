@@ -1,18 +1,34 @@
 ---
 import Project from './Project.astro'
+import Badge from './Badge.astro'
 ---
 
 <section id="work" class="px-5 py-10 md:px-14 md:py-20">
   <p class="text-muted mb-4 font-mono text-sm tracking-widest uppercase">
     <span class="text-accent">(02)</span> — Selected Work
   </p>
-  <h2 class="max-w-[24ch]">Three things I've shipped.</h2>
+  <h2 class="max-w-[24ch]">Things I've shipped.</h2>
   <div class="border-line my-6 border-t"></div>
   <Project
     title="Loop"
     category="Full-Stack App"
-    desc="Task management with real auth — sign in with email or Google, and your tasks follow you across devices via Supabase."
+    desc="A minimal task manager with full auth — email/password, Google OAuth, protected routes, and tasks synced to a PostgreSQL database via Supabase."
     ghUrl="https://github.com/TavionK/Loop-app"
     demoUrl="https://loop-todo-list.netlify.app/"
-  />
+  >
+    <Badge text="React" />
+    <Badge text="TypeScript" />
+    <Badge text="Supabase" />
+  </Project>
+  <Project
+    title="GPA Calculator"
+    category="Productivity Tool"
+    desc="A weighted GPA calculator that tracks cumulative GPA across semesters, with live updates, honors eligibility, and an accessible FAQ built in from the start."
+    ghUrl="https://github.com/TavionK/react-gpa-calculator"
+    demoUrl="https://tavion-gpa-calculator.netlify.app/"
+  >
+    <Badge text="React" />
+    <Badge text="TypeScript" />
+    <Badge text="Radix" />
+  </Project>
 </section>
