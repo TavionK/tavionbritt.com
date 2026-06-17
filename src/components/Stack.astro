@@ -3,7 +3,10 @@ import StackCard from './StackCard.astro'
 import StackCardItem from './StackCardItem.astro'
 ---
 
-<section class="bg-surface px-5 py-10 md:px-14 md:py-20">
+<section
+  class="bg-surface border-line border-t px-5 py-10 md:px-14 md:py-20"
+  id="work"
+>
   <p class="text-muted mb-4 font-mono text-sm tracking-widest uppercase">
     <span class="text-accent">(01)</span> — Stack
   </p>
@@ -21,10 +24,12 @@ import StackCardItem from './StackCardItem.astro'
       <StackCardItem item="React" num="05" />
       <StackCardItem item="Next.js" num="06" />
       <StackCardItem item="Astro" num="07" />
+      <StackCardItem item="Tailwind CSS" num="08" />
     </StackCard>
     <StackCard title="Platform">
-      <StackCardItem item="Supabase" num="08" />
-      <StackCardItem item="Git" num="09" />
+      <StackCardItem item="Supabase" num="09" />
+      <StackCardItem item="Git" num="10" />
+      <StackCardItem item="Netlify" num="11" />
     </StackCard>
     <StackCard title="Practice">
       <StackCardItem item="Accessibility" num="A11y" />
