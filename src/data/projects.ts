@@ -17,4 +17,13 @@ export const projects = [
     demoUrl: 'https://tavion-gpa-calculator.netlify.app/',
     badges: ['React', 'TypeScript', 'Radix'],
   },
+  {
+    num: '03',
+    title: 'MakaylaDecoded.com',
+    category: 'Blog & Portfolio',
+    desc: 'Coming Soon',
+    ghUrl: '',
+    demoUrl: '',
+    badges: ['Astro', 'TypeScript', 'Tailwind CSS'],
+  },
 ]
