@@ -13,6 +13,7 @@ import { projects } from '../../data/projects.ts'
   {
     projects.map((project, index) => (
       <Project
+        num={project.num}
         title={project.title}
         category={project.category}
         desc={project.desc}

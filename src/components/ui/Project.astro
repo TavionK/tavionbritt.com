@@ -1,26 +1,35 @@
 ---
 import { MoveUpRight } from '@lucide/astro'
 
-const { title, category, desc, ghUrl, demoUrl, odd } = Astro.props
+const { num, title, category, desc, ghUrl, demoUrl, odd } = Astro.props
 ---
 
 <article
-  class={`px-5 py-10 md:px-14 md:py-12 -mx-5 md:-mx-14 ${odd ? 'bg-surface border-t border-line' : ''}`}
+  class={`px-5 py-10 md:px-14 md:py-12 -mx-5 md:-mx-14 md:flex md:gap-16 ${odd ? 'bg-surface border-t border-line' : ''}`}
 >
-  <p class="text-accent font-mono text-xs uppercase">{category}</p>
-  <h3 class="mb-2">{title}</h3>
-  <p class="text-muted max-w-[52ch]">{desc}</p>
-  <div class="my-6 flex gap-2">
-    <slot />
-  </div>
+  <span
+    class="font-serif text-6xl text-transparent [--webkit-text-stroke:1px] [-webkit-text-stroke:1px_var(--color-muted)] md:text-8xl"
+    >{num}</span
+  >
+
   <div>
-    <a
-      class="border-accent mr-6 inline-flex items-center gap-2 border-b font-mono text-sm"
-      href={demoUrl}>Live <MoveUpRight size={8} stroke-width={3} /></a
-    >
-    <a
-      class="text-muted inline-flex items-center gap-2 font-mono text-sm"
-      href={ghUrl}>GitHub <MoveUpRight size={8} stroke-width={3} /></a
-    >
+    <p class="text-accent font-mono text-xs uppercase">{category}</p>
+    <h3 class="mb-2">{title}</h3>
+    <p class="text-muted md:line-clamp-2 md:max-w-3/4 md:text-balance">
+      {desc}
+    </p>
+    <div class="my-6 flex gap-2">
+      <slot />
+    </div>
+    <div>
+      <a
+        class="border-accent mr-6 inline-flex items-center gap-2 border-b font-mono text-sm"
+        href={demoUrl}>Live <MoveUpRight size={8} stroke-width={3} /></a
+      >
+      <a
+        class="text-muted inline-flex items-center gap-2 font-mono text-sm"
+        href={ghUrl}>GitHub <MoveUpRight size={8} stroke-width={3} /></a
+      >
+    </div>
   </div>
 </article>

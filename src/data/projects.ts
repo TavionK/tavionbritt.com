@@ -1,5 +1,6 @@
 export const projects = [
   {
+    num: '01',
     title: 'Loop',
     category: 'Full-Stack App',
     desc: 'A minimal task manager with full auth — email/password, Google OAuth, protected routes, and tasks synced to a PostgreSQL database via Supabase.',
@@ -8,6 +9,7 @@ export const projects = [
     badges: ['React', 'TypeScript', 'Supabase'],
   },
   {
+    num: '02',
     title: 'GPA Calculator',
     category: 'Productivity Tool',
     desc: 'A weighted GPA calculator that tracks cumulative GPA across semesters, with live updates, honors eligibility, and an accessible FAQ built in from the start.',
