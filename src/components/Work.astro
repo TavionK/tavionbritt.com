@@ -8,23 +8,22 @@ import { projects } from '../data/projects.ts'
   <p class="text-muted mb-4 font-mono text-sm tracking-widest uppercase">
     <span class="text-accent">(02)</span> — Selected Work
   </p>
-  <h2 class="max-w-[24ch]">Things I've shipped.</h2>
-  <div class="border-line my-6 border-t"></div>
-  <div>
-    {
-      projects.map((project) => (
-        <Project
-          title={project.title}
-          category={project.category}
-          desc={project.desc}
-          ghUrl={project.ghUrl}
-          demoUrl={project.demoUrl}
-        >
-          {project.badges.map((tag) => (
-            <Badge text={tag} key={tag} />
-          ))}
-        </Project>
-      ))
-    }
-  </div>
+  <h2 class="mb-6 max-w-[24ch]">Things I've shipped.</h2>
+  <div class="border-line border-t"></div>
+  {
+    projects.map((project, index) => (
+      <Project
+        title={project.title}
+        category={project.category}
+        desc={project.desc}
+        ghUrl={project.ghUrl}
+        demoUrl={project.demoUrl}
+        odd={index % 2 !== 0}
+      >
+        {project.badges.map((tag) => (
+          <Badge text={tag} key={tag} />
+        ))}
+      </Project>
+    ))
+  }
 </section>
