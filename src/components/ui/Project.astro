@@ -28,7 +28,7 @@ const { num, title, category, desc, ghUrl, demoUrl, odd } = Astro.props
         demoUrl ? (
           <a
             aria-label={`${title} - view project`}
-            class="border-accent mr-6 inline-flex items-center gap-2 border-b font-mono text-sm"
+            class="ally-ring border-accent mr-6 inline-flex items-center gap-2 border-b font-mono text-sm focus-visible:border-b-transparent"
             href={demoUrl}
           >
             Live <MoveUpRight size={8} stroke-width={3} aria-hidden="true" />
@@ -41,7 +41,7 @@ const { num, title, category, desc, ghUrl, demoUrl, odd } = Astro.props
         ghUrl ? (
           <a
             aria-label={`${title} - view project`}
-            class="border-accent mr-6 inline-flex items-center gap-2 border-b font-mono text-sm"
+            class="ally-ring border-accent mr-6 inline-flex items-center gap-2 border-b font-mono text-sm focus-visible:border-b-transparent"
             href={ghUrl}
           >
             GitHub <MoveUpRight size={8} stroke-width={3} aria-hidden="true" />
