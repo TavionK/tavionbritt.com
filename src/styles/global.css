@@ -93,3 +93,9 @@
         }
     }
 }
+
+@layer components {
+    .ally-ring {
+        @apply focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-6 focus-visible:rounded-md focus-visible:transition-none;
+    }
+}
