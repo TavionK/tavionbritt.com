@@ -1,11 +1,15 @@
 ---
-
+import logoSmall from '../../assets/logoSmall.svg?raw'
+import fullLogo from '../../assets/logoFull.svg?raw'
 ---
 
 <footer
   class="bg-footer border-line flex flex-col justify-between gap-2 border-t px-5 py-4 text-sm md:flex-row md:px-14 md:py-8"
 >
-  <p>Tavion Britt</p>
+  <a
+    class="text-accent [&>svg]:h-auto [&>svg]:w-6 md:[&>svg]:w-8"
+    set:html={logoSmall}
+  />
   <p class="text-muted">Built with semantic HTML & a real focus ring</p>
   <p class="text-muted">&copy; 2026</p>
 </footer>

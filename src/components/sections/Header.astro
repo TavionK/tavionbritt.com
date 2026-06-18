@@ -1,11 +1,19 @@
 ---
 import Nav from './Nav.astro'
+import logoSmall from '../../assets/logoSmall.svg?raw'
+import fullLogo from '../../assets/logoFull.svg?raw'
 ---
 
 <header
   class="border-line flex items-center justify-between border-b px-5 py-10 md:px-14 md:py-8"
 >
-  <a class="md:hidden">TB</a>
-  <a class="hidden md:block">Tavion Britt</a>
+  <a
+    class="text-accent md:hidden [&>svg]:h-auto [&>svg]:w-8"
+    set:html={logoSmall}
+  />
+  <a
+    class="text-accent hidden md:block [&>svg]:h-8 [&>svg]:w-auto"
+    set:html={fullLogo}
+  />
   <Nav />
 </header>
