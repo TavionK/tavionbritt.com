@@ -32,6 +32,7 @@ import { X } from '@lucide/astro'
   <button
     aria-label="open main menu"
     aria-expanded="false"
+    aria-controls="overlay"
     id="mobile-menu"
     class="ally-ring relative z-1 md:hidden"
     ><Menu id="mobile-menu-open" />
@@ -100,13 +101,34 @@ import { X } from '@lucide/astro'
     mainFooter?.forEach((section) => {
       section.removeAttribute('inert')
     })
+    mobileMenu?.focus()
+  }
+
+  function trapFocus(event: KeyboardEvent): void {
+    if (!isOpen) return
+    const focusable = [
+      mobileMenu,
+      ...Array.from(overlay?.querySelectorAll<HTMLElement>('a, button') ?? []),
+    ].filter((el): el is HTMLElement => el !== null)
+    const first = focusable[0]
+    const last = focusable[focusable.length - 1]
+    if (event.key === 'Tab') {
+      if (event.shiftKey) {
+        if (document.activeElement === first) {
+          event.preventDefault()
+          last.focus()
+        }
+      } else {
+        if (document.activeElement === last) {
+          event.preventDefault()
+          first.focus()
+        }
+      }
+    }
   }
 
   document.addEventListener('keydown', (event: KeyboardEvent): void => {
-    if (event.key === 'Escape') {
-      if (isOpen) {
-        closeMenu()
-      }
-    }
+    if (event.key === 'Escape' && isOpen) closeMenu()
+    trapFocus(event)
   })
 </script>
