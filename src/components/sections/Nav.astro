@@ -56,7 +56,7 @@ import { X } from '@lucide/astro'
 <script>
   let isOpen: boolean = false
   const mainFooter: NodeListOf<Element> =
-    document.querySelectorAll('main, footer')
+    document.querySelectorAll('main, footer, [href="#main-content"]')
   const mobileMenu: HTMLElement | null = document.getElementById('mobile-menu')
   const mobileMenuClose: HTMLElement | null =
     document.getElementById('mobile-menu-close')
