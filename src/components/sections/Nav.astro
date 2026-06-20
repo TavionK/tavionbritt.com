@@ -29,7 +29,11 @@ import { X } from '@lucide/astro'
   </ul>
 
   <!--Mobile button -->
-  <button id="mobile-menu" class="relative z-1 md:hidden"
+  <button
+    aria-label="open main menu"
+    aria-expanded="false"
+    id="mobile-menu"
+    class="ally-ring relative z-1 md:hidden"
     ><Menu id="mobile-menu-open" />
     <X id="mobile-menu-close" class="hidden" /></button
   >
@@ -51,6 +55,8 @@ import { X } from '@lucide/astro'
 
 <script>
   let isOpen: boolean = false
+  const mainFooter: NodeListOf<Element> =
+    document.querySelectorAll('main, footer')
   const mobileMenu: HTMLElement | null = document.getElementById('mobile-menu')
   const mobileMenuClose: HTMLElement | null =
     document.getElementById('mobile-menu-close')
@@ -58,29 +64,47 @@ import { X } from '@lucide/astro'
     document.getElementById('mobile-menu-open')
   const overlay: HTMLElement | null = document.getElementById('overlay')
 
-  mobileMenu?.addEventListener('click', () => {
+  mobileMenu?.addEventListener('click', (): void => {
     isOpen ? closeMenu() : openMenu()
   })
 
-  document.querySelectorAll('#overlay a').forEach((link) => {
-    link.addEventListener('click', () => {
+  document.querySelectorAll('#overlay a').forEach((link: Element): void => {
+    link.addEventListener('click', (): void => {
       closeMenu()
     })
   })
 
-  function openMenu() {
+  function openMenu(): void {
     isOpen = true
     overlay?.classList.remove('hidden')
     mobileMenuClose?.classList.remove('hidden')
     mobileMenuOpen?.classList.add('hidden')
     document.body.classList.add('overflow-hidden')
+    mobileMenu?.setAttribute('aria-expanded', 'true')
+    mobileMenu?.setAttribute('aria-label', 'close main menu')
+    mainFooter?.forEach((section) => {
+      section.setAttribute('inert', '')
+    })
   }
 
-  function closeMenu() {
+  function closeMenu(): void {
     isOpen = false
     overlay?.classList.add('hidden')
     mobileMenuClose?.classList.add('hidden')
     mobileMenuOpen?.classList.remove('hidden')
     document.body.classList.remove('overflow-hidden')
+    mobileMenu?.setAttribute('aria-expanded', 'false')
+    mobileMenu?.setAttribute('aria-label', 'open main menu')
+    mainFooter?.forEach((section) => {
+      section.removeAttribute('inert')
+    })
   }
+
+  document.addEventListener('keydown', (event: KeyboardEvent): void => {
+    if (event.key === 'Escape') {
+      if (isOpen) {
+        closeMenu()
+      }
+    }
+  })
 </script>
