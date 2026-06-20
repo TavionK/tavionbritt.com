@@ -1,9 +1,10 @@
 ---
-
+import { Menu } from '@lucide/astro'
+import { X } from '@lucide/astro'
 ---
 
 <nav class="font-mono text-sm">
-  <ul class="flex gap-8">
+  <ul class="hidden gap-8 md:flex">
     <li>
       <a
         href="#stack"
@@ -26,4 +27,58 @@
       >
     </li>
   </ul>
+
+  <!--Mobile button -->
+  <button id="mobile-menu" class="relative z-1 md:hidden"
+    ><Menu id="mobile-menu-open" />
+    <X id="mobile-menu-close" class="hidden" /></button
+  >
+
+  <!--Mobile menu -->
+  <div id="overlay" class="bg-surface fixed inset-0 hidden md:hidden">
+    <ul class="flex h-full flex-col items-center justify-center gap-8">
+      <li><a class="ally-ring cursor-pointer" href="#stack">Stack</a></li>
+      <li><a class="ally-ring cursor-pointer" href="#work">Work</a></li>
+      <li>
+        <a
+          class="ally-ring bg-accent cursor-pointer rounded-md px-3 py-2"
+          href="#contact">Get in touch</a
+        >
+      </li>
+    </ul>
+  </div>
 </nav>
+
+<script>
+  let isOpen: boolean = false
+  const mobileMenu: HTMLElement | null = document.getElementById('mobile-menu')
+  const mobileMenuClose: HTMLElement | null =
+    document.getElementById('mobile-menu-close')
+  const mobileMenuOpen: HTMLElement | null =
+    document.getElementById('mobile-menu-open')
+  const overlay: HTMLElement | null = document.getElementById('overlay')
+
+  mobileMenu?.addEventListener('click', () => {
+    isOpen ? closeMenu() : openMenu()
+  })
+
+  document.querySelectorAll('#overlay a').forEach((link) => {
+    link.addEventListener('click', () => {
+      closeMenu()
+    })
+  })
+
+  function openMenu() {
+    isOpen = true
+    overlay?.classList.remove('hidden')
+    mobileMenuClose?.classList.remove('hidden')
+    mobileMenuOpen?.classList.add('hidden')
+  }
+
+  function closeMenu() {
+    isOpen = false
+    overlay?.classList.add('hidden')
+    mobileMenuClose?.classList.add('hidden')
+    mobileMenuOpen?.classList.remove('hidden')
+  }
+</script>
