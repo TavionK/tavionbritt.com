@@ -39,7 +39,7 @@ import { X } from '@lucide/astro'
   >
 
   <!--Mobile menu -->
-  <div id="overlay" class="bg-surface fixed inset-0 hidden md:hidden">
+  <div id="overlay" role="dialog" aria-label="Main navigation" aria-modal="true" class="bg-surface fixed inset-0 hidden md:hidden">
     <ul class="flex h-full flex-col items-center justify-center gap-8">
       <li><a class="ally-ring cursor-pointer" href="#stack">Stack</a></li>
       <li><a class="ally-ring cursor-pointer" href="#work">Work</a></li>
@@ -85,6 +85,8 @@ import { X } from '@lucide/astro'
     mainFooter?.forEach((section) => {
       section.setAttribute('inert', '')
     })
+    const firstLink = overlay?.querySelector('a') as HTMLElement | null
+    firstLink?.focus()
   }
 
   function closeMenu(): void {

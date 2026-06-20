@@ -27,7 +27,7 @@ const { num, title, category, desc, ghUrl, demoUrl, odd } = Astro.props
       {
         demoUrl ? (
           <a
-            aria-label={`${title} - view project`}
+            aria-label={`${title} — view live demo`}
             class="ally-ring border-accent mr-6 inline-flex items-center gap-2 border-b font-mono text-sm focus-visible:border-b-transparent"
             href={demoUrl}
           >
@@ -40,7 +40,7 @@ const { num, title, category, desc, ghUrl, demoUrl, odd } = Astro.props
       {
         ghUrl ? (
           <a
-            aria-label={`${title} - view project`}
+            aria-label={`${title} — view on GitHub`}
             class="ally-ring border-accent mr-6 inline-flex items-center gap-2 border-b font-mono text-sm focus-visible:border-b-transparent"
             href={ghUrl}
           >

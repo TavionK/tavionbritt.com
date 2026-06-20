@@ -17,9 +17,14 @@ const { title } = Astro.props
       rel="stylesheet"
     />
     <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="Tavion Britt — Frontend developer building fast, accessible interfaces with React, Next.js, and Astro." />
     <title>{title}</title>
   </head>
   <body>
+    <a
+      href="#main-content"
+      class="ally-ring sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-accent focus:px-4 focus:py-2 focus:rounded-md focus:text-black"
+    >Skip to main content</a>
     <slot />
   </body>
 </html>
