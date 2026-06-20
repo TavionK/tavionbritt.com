@@ -5,6 +5,7 @@ const { num, title, category, desc, ghUrl, demoUrl, odd } = Astro.props
 ---
 
 <article
+  aria-labelledby={`project-title-${num}`}
   class={`px-5 py-10 md:px-14 md:pt-12 -mx-5 md:-mx-14 md:flex md:gap-16 ${odd ? 'bg-surface border-t border-line' : ''}`}
 >
   <span
@@ -16,7 +17,7 @@ const { num, title, category, desc, ghUrl, demoUrl, odd } = Astro.props
 
   <div>
     <p class="text-accent font-mono text-xs uppercase">{category}</p>
-    <h3 class="mb-2">{title}</h3>
+    <h3 id={`project-title-${num}`} class="mb-2">{title}</h3>
     <p class="text-muted md:line-clamp-2 md:max-w-3/4 md:text-balance">
       {desc}
     </p>
@@ -27,9 +28,11 @@ const { num, title, category, desc, ghUrl, demoUrl, odd } = Astro.props
       {
         demoUrl ? (
           <a
-            aria-label={`${title} — view live demo`}
+            aria-label={`${title} — view live demo (opens in a new tab)`}
             class="ally-ring border-accent mr-6 inline-flex items-center gap-2 border-b font-mono text-sm focus-visible:border-b-transparent"
             href={demoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Live <MoveUpRight size={8} stroke-width={3} aria-hidden="true" />
           </a>
@@ -40,9 +43,11 @@ const { num, title, category, desc, ghUrl, demoUrl, odd } = Astro.props
       {
         ghUrl ? (
           <a
-            aria-label={`${title} — view on GitHub`}
+            aria-label={`${title} — view on GitHub (opens in a new tab)`}
             class="ally-ring border-accent mr-6 inline-flex items-center gap-2 border-b font-mono text-sm focus-visible:border-b-transparent"
             href={ghUrl}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             GitHub <MoveUpRight size={8} stroke-width={3} aria-hidden="true" />
           </a>
