@@ -21,9 +21,9 @@ export const projects = [
     num: '03',
     title: 'MakaylaDecoded.com',
     category: 'Blog & Portfolio',
-    desc: 'Coming Soon',
-    ghUrl: '',
-    demoUrl: '',
+    desc: 'A blog and portfolio for an ethical hacker — featuring CTF write-ups, TryHackMe room breakdowns, and cybersecurity insights written for learners at every level.',
+    ghUrl: 'https://github.com/TavionK/makayladecoded.com',
+    demoUrl: 'https://www.makayladecoded.com/',
     badges: ['Astro', 'TypeScript', 'Tailwind CSS'],
   },
 ]
