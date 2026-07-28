@@ -1,46 +1,65 @@
-# Astro Starter Kit: Basics
+# tavionbritt.com
 
-```sh
-npm create astro@latest -- --template basics
+Personal portfolio site for Tavion Britt — a frontend developer focused on fast, accessible interfaces.
+
+**Live site:** [tavionbritt.com](https://www.tavionbritt.com)
+
+---
+
+## Screenshots
+
+### Desktop
+
+![Desktop screenshot](screenshots/desktop-full.png)
+
+### Mobile
+
+![Mobile screenshot](screenshots/mobile-full.png)
+
+---
+
+## Stack
+
+- [Astro](https://astro.build) — static site framework
+- [Tailwind CSS v4](https://tailwindcss.com) — utility-first styling
+- [TypeScript](https://www.typescriptlang.org) — type safety
+- [Lucide](https://lucide.dev) — icons
+
+## Features
+
+- Fully accessible — keyboard navigable, screen reader tested, WCAG compliant
+- Responsive layout — mobile-first design
+- Sections: Hero, Tech Stack, Selected Work, Contact, Footer
+- Project data driven from a single `src/data/projects.ts` file
+
+## Project Structure
+
 ```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
 /
 ├── public/
+│   ├── favicon.ico
 │   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── sections/     # Hero, Stack, Work, Contact, Nav, Header, Footer
+│   │   └── ui/           # Badge, Project, StackCard, StackCardItem
+│   ├── data/
+│   │   └── projects.ts   # Project list
+│   ├── layouts/
+│   │   └── Layout.astro
+│   ├── pages/
+│   │   └── index.astro
+│   └── styles/
+│       └── global.css
 └── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Commands
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+| Command           | Action                                      |
+| :---------------- | :------------------------------------------ |
+| `npm install`     | Install dependencies                        |
+| `npm run dev`     | Start local dev server at `localhost:4321`  |
+| `npm run build`   | Build for production to `./dist/`           |
+| `npm run preview` | Preview production build locally            |
