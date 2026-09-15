@@ -1,6 +1,24 @@
 export const projects = [
   {
     num: '01',
+    title: 'MakaylaDecoded.com',
+    category: 'Blog & Portfolio',
+    desc: 'A blog and portfolio for an ethical hacker — featuring CTF write-ups, TryHackMe room breakdowns, and cybersecurity insights written for learners at every level.',
+    ghUrl: 'https://github.com/TavionK/makayladecoded.com',
+    demoUrl: 'https://www.makayladecoded.com/',
+    badges: ['Astro', 'TypeScript', 'Tailwind CSS'],
+  },
+  {
+    num: '02',
+    title: 'QueryLock',
+    category: 'Company Website',
+    desc: 'Marketing site for a developer security startup — clean, fast, and built to communicate the product clearly to a technical audience.',
+    ghUrl: 'https://github.com/querylock/Website',
+    demoUrl: 'https://querylock.com/',
+    badges: ['Astro', 'TypeScript', 'Tailwind CSS'],
+  },
+  {
+    num: '03',
     title: 'Loop',
     category: 'Full-Stack App',
     desc: 'A minimal task manager with full auth — email/password, Google OAuth, protected routes, and tasks synced to a PostgreSQL database via Supabase.',
@@ -9,21 +27,12 @@ export const projects = [
     badges: ['React', 'TypeScript', 'Supabase'],
   },
   {
-    num: '02',
+    num: '04',
     title: 'GPA Calculator',
     category: 'Productivity Tool',
     desc: 'A weighted GPA calculator that tracks cumulative GPA across semesters, with live updates, honors eligibility, and an accessible FAQ built in from the start.',
     ghUrl: 'https://github.com/TavionK/react-gpa-calculator',
     demoUrl: 'https://tavion-gpa-calculator.netlify.app/',
     badges: ['React', 'TypeScript', 'Radix'],
-  },
-  {
-    num: '03',
-    title: 'MakaylaDecoded.com',
-    category: 'Blog & Portfolio',
-    desc: 'A blog and portfolio for an ethical hacker — featuring CTF write-ups, TryHackMe room breakdowns, and cybersecurity insights written for learners at every level.',
-    ghUrl: 'https://github.com/TavionK/makayladecoded.com',
-    demoUrl: 'https://www.makayladecoded.com/',
-    badges: ['Astro', 'TypeScript', 'Tailwind CSS'],
   },
 ]
