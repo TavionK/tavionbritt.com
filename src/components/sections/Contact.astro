@@ -7,7 +7,10 @@ import { MoveUpRight } from '@lucide/astro'
   aria-labelledby="contact-heading"
   class="bg-surface border-line border-t px-5 py-10 md:px-14 md:py-20"
 >
-  <p aria-hidden="true" class="text-muted mb-4 font-mono text-sm tracking-widest uppercase">
+  <p
+    aria-hidden="true"
+    class="text-muted mb-4 font-mono text-sm tracking-widest uppercase"
+  >
     <span class="text-accent">(03)</span> — Contact
   </p>
   <h2 id="contact-heading" class="mb-4 md:max-w-[24ch]">
@@ -17,21 +20,22 @@ import { MoveUpRight } from '@lucide/astro'
     I'm open to frontend roles and a little select freelance. Fastest way to
     reach me is email — I read every one.
   </p>
-  <div class="flex flex-col gap-2">
+  <div class="flex flex-col">
     <a
       href="mailto:tavion.k.britt99@gmail.com"
       aria-label="email - tavion.k.britt99@gmail.com"
-      class="ally-ring border-line flex cursor-pointer items-center justify-between border-y py-6"
+      class="ally-ring border-line group flex cursor-pointer items-center justify-between border-y px-4 py-6 rounded-sm transition-all duration-500 ease-in-out hover:bg-white/5 hover:py-8"
     >
-      <span class="text-muted font-mono text-xs uppercase md:text-sm"
+      <span
+        class="text-muted group-hover:text-foreground font-mono text-xs uppercase transition-colors duration-500 ease-in-out md:text-sm"
         >email</span
       >
-      <span class="flex items-center gap-2 font-serif md:text-xl"
-        >tavion.k.britt99@gmail.com <MoveUpRight
-          color="#E89A4C"
-          size={15}
-          aria-hidden="true"
-        /></span
+      <span
+        class="flex items-center gap-2 font-serif transition-colors duration-500 ease-in-out group-hover:brightness-125 md:text-xl"
+        >tavion.k.britt99@gmail.com <span
+          class="inline-flex transition-transform duration-500 ease-in-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+          ><MoveUpRight color="#E89A4C" size={15} aria-hidden="true" /></span
+        ></span
       >
     </a>
     <a
@@ -39,17 +43,18 @@ import { MoveUpRight } from '@lucide/astro'
       rel="noopener noreferrer"
       href="https://github.com/TavionK"
       aria-label="github - github.com/TavionK (opens in a new tab)"
-      class="ally-ring border-line flex cursor-pointer items-center justify-between border-b py-6"
+      class="ally-ring border-line group flex cursor-pointer items-center justify-between border-b px-4 py-6 rounded-sm transition-all duration-500 ease-in-out hover:bg-white/5 hover:py-8"
     >
-      <span class="text-muted font-mono text-xs uppercase md:text-sm"
+      <span
+        class="text-muted group-hover:text-foreground font-mono text-xs uppercase transition-colors duration-500 ease-in-out md:text-sm"
         >github</span
       >
-      <span class="flex items-center gap-2 font-serif md:text-xl"
-        >github.com/TavionK <MoveUpRight
-          color="#E89A4C"
-          size={15}
-          aria-hidden="true"
-        /></span
+      <span
+        class="flex items-center gap-2 font-serif transition-colors duration-500 ease-in-out group-hover:brightness-125 md:text-xl"
+        >github.com/TavionK <span
+          class="inline-flex transition-transform duration-500 ease-in-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+          ><MoveUpRight color="#E89A4C" size={15} aria-hidden="true" /></span
+        ></span
       >
     </a>
     <a
@@ -57,17 +62,18 @@ import { MoveUpRight } from '@lucide/astro'
       rel="noopener noreferrer"
       href="https://www.linkedin.com/in/tavionb/"
       aria-label="linkedin - in/tavionb (opens in a new tab)"
-      class="ally-ring border-line flex cursor-pointer items-center justify-between border-b py-6"
+      class="ally-ring border-line group flex cursor-pointer items-center justify-between border-b px-4 py-6 rounded-sm transition-all duration-500 ease-in-out hover:bg-white/5 hover:py-8"
     >
-      <span class="text-muted font-mono text-xs uppercase md:text-sm"
+      <span
+        class="text-muted group-hover:text-foreground font-mono text-xs uppercase transition-colors duration-500 ease-in-out md:text-sm"
         >linkedin</span
       >
-      <span class="flex items-center gap-2 font-serif md:text-xl"
-        >in/tavionb <MoveUpRight
-          color="#E89A4C"
-          size={15}
-          aria-hidden="true"
-        /></span
+      <span
+        class="flex items-center gap-2 font-serif transition-colors duration-500 ease-in-out group-hover:brightness-125 md:text-xl"
+        >in/tavionb <span
+          class="inline-flex transition-transform duration-500 ease-in-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+          ><MoveUpRight color="#E89A4C" size={15} aria-hidden="true" /></span
+        ></span
       >
     </a>
   </div>
